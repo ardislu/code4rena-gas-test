@@ -1,0 +1,4 @@
+seqLen: 1
+estimateGas: true
+corpusDir: corpus
+testLimit: 20000
