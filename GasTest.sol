@@ -18,33 +18,44 @@ contract GasTest {
         }
     }
 
-    function shortArraysBefore(uint256[] calldata array) external pure {
-        require(array.length <= 5);
+    function testOneBefore(uint256[] calldata array) external pure {
+        require(array.length <= 8);
         beforeOptimization(array);
     }
 
-    function shortArraysAfter(uint256[] calldata array) external pure {
-        require(array.length <= 5);
+    function testOneAfter(uint256[] calldata array) external pure {
+        require(array.length <= 8);
         afterOptimization(array);
     }
 
-    function mediumArraysBefore(uint256[] calldata array) external pure {
-        require(array.length > 5 && array.length <= 25);
+    function testTwoBefore(uint256[] calldata array) external pure {
+        require(array.length > 8 && array.length <= 16);
         beforeOptimization(array);
     }
 
-    function mediumArraysAfter(uint256[] calldata array) external pure {
-        require(array.length > 5 && array.length <= 25);
+    function testTwoAfter(uint256[] calldata array) external pure {
+        require(array.length > 8 && array.length <= 16);
         afterOptimization(array);
     }
 
-    function longArraysBefore(uint256[] calldata array) external pure {
-        require(array.length > 25);
+    function testThreeBefore(uint256[] calldata array) external pure {
+        require(array.length > 16 && array.length <= 24);
         beforeOptimization(array);
     }
 
-    function longArraysAfter(uint256[] calldata array) external pure {
-        require(array.length > 25);
+    function testThreeAfter(uint256[] calldata array) external pure {
+        require(array.length > 16 && array.length <= 24);
+        afterOptimization(array);
+    }
+
+
+    function testFourBefore(uint256[] calldata array) external pure {
+        require(array.length > 24);
+        beforeOptimization(array);
+    }
+
+    function testFourAfter(uint256[] calldata array) external pure {
+        require(array.length > 24);
         afterOptimization(array);
     }
 
