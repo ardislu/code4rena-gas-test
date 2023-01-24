@@ -48,7 +48,6 @@ contract GasTest {
         afterOptimization(array);
     }
 
-
     function testFourBefore(uint256[] calldata array) external pure {
         require(array.length > 24);
         beforeOptimization(array);
