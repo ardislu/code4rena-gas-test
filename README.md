@@ -11,5 +11,5 @@ Specifically:
 Use [Echidna](https://github.com/crytic/echidna) to run the test:
 
 ```
-echidna-test GasTest.sol --config echidna.yaml
+echidna GasTest.sol --config echidna.yaml
 ```
