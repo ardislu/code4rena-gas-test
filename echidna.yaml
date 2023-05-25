@@ -2,3 +2,4 @@ seqLen: 1
 estimateGas: true
 corpusDir: corpus
 testLimit: 20000
+solcArgs: "--optimize --optimize-runs 10000"
